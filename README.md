@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/28030519/64352699-ded39200-cfd2-11e9-91a4-ed054d89ed97.jpg" width="60%" title="Hackathon Netshoes">
 </p>
 
-![teste](image1.jpg?raw=true "Imagem 1")
+![teste](image1.png?raw=true "Imagem 1")
 # Hackathon Netshoes
 
 A Netshoes foi fundada em janeiro de 2000 como uma loja física de calçados em um estacionamento em São Paulo. Em 2002 iniciamos nossas operações online e em 2007, fechamos nossas lojas físicas e migramos para um negócio 100% online.
