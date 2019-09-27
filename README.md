@@ -2,7 +2,6 @@
   <img src="https://user-images.githubusercontent.com/28030519/64352699-ded39200-cfd2-11e9-91a4-ed054d89ed97.jpg" width="60%" title="Hackathon Netshoes">
 </p>
 
-
 # Hackathon Netshoes
 
 A Netshoes foi fundada em janeiro de 2000 como uma loja física de calçados em um estacionamento em São Paulo. Em 2002 iniciamos nossas operações online e em 2007, fechamos nossas lojas físicas e migramos para um negócio 100% online.
@@ -85,3 +84,18 @@ Por qualidade de catálogo deve-se considerar os fatores abaixo:
 4. Na aba recursos, acessar o ```Big Query```.
   - Aqui você encontrará as bases de dados necessárias para a realização dos desafios - ```dadosBrutos```. 
   - Seu grupo terá permissão de escrita/leitura nesse dataset. **CUIDADO: havendo necessidade de escrita, recomendamos copiar a tabela e não alterar a original.**
+  
+# Extras
+#### Integração com whats
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/28030519/65807581-73aa5500-e165-11e9-860c-e080a1ac63c5.png" width="60%" title="Hackathon Netshoes">
+</p>
+
+#### Mock de Apis de Pedido
+
+Status do pedido: https://us-central1-hackathon-2019-254113.cloudfunctions.net/purchase_status
+
+Status da troca: https://us-central1-hackathon-2019-254113.cloudfunctions.net/exchange_status
+
+Saldo do voucher: https://us-central1-hackathon-2019-254113.cloudfunctions.net/voucher_balance
