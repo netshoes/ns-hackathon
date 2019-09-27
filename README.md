@@ -2,6 +2,7 @@
   <img src="https://user-images.githubusercontent.com/28030519/64352699-ded39200-cfd2-11e9-91a4-ed054d89ed97.jpg" width="60%" title="Hackathon Netshoes">
 </p>
 
+
 # Hackathon Netshoes
 
 A Netshoes foi fundada em janeiro de 2000 como uma loja física de calçados em um estacionamento em São Paulo. Em 2002 iniciamos nossas operações online e em 2007, fechamos nossas lojas físicas e migramos para um negócio 100% online.
@@ -9,6 +10,33 @@ A Netshoes foi fundada em janeiro de 2000 como uma loja física de calçados em 
 Hoje, nossa stack conta com tecnologias de ponta, como banco de dados não-relacionais, softwares de mensageria, java reativo e arquitetura em microserviços. Seguimos inovando e nos desafiando. 
 
 Esse repositório será nosso principal meio de compartilhamento da informação. Nele, você encontrará o regulamento da nossa maratona. Alguns dias antes disponibilizaremos aqui os temas do Hackathon Netshoes. Venha viver essa experiência!
+
+# Regras do jogo
+
+- 5 pessoas por time.
+- Ao final do evento os grupos deverão ter submetido uma Pull Request no repositório Git da Hackathon - https://github.com/netshoes/ns-hackathon.
+- Ao final do evento os grupos apresentarão as soluções desenvolvidas para a banca de jurados.
+- A apresentação será em formato de pitch, com duração de no máximo 3 minutos. Os jurados terão 2 minutos para realizar perguntas.
+
+## Metodologia de avaliação
+Os projetos propostos serão avaliados pelos jurados e receberão notas ao final. O cálculo será feito conforme o seguinte racional:
+
+```NOTA FINAL = Σ [ (Nota critério 1) + (Nota critério 2) + (Nota critério 3)+ (Nota critério 4) ]```
+
+Os critérios de avaliação utilizados pelos jurados para definir quais das soluções propostas pelos grupos serão vencedoras da Hackathon são:
+- *Estrutura da solução:* Diz respeito ao racional proposto pelo time para solucionar o desafio.
+- *Relevância com o tema:* Diz respeito a quanto a solução proposta resolve o desafio.
+- *Completude:* Diz respeito a quanto a solução proposta está funcional.
+- *Pitch:* Diz respeito a qualidade e clareza da apresentação.
+
+Cada critério será avaliado conforme a escala abaixo:
+- *Não atende:* 0 ponto.
+- *Atende parcialmente:* 1 ponto.
+- *Atende:* 2 pontos.
+- *Supera:* 3 pontos. 
+
+Ao final, serão somadas as notas de todos os jurados para determinar a pontuação final do grupo.
+Em caso de empate, os jurados decidirão entre eles quais serão os grupos vencedores.
 
 # Desafios
 ## Autoatendimento
@@ -47,11 +75,13 @@ Por qualidade de catálogo deve-se considerar os fatores abaixo:
 -	Diminuição do tempo para aprovação de um produto de lojista.
 -	Aumento na quantidade de produtos ativados ao dia.
 
-
-
-# Inscrições
-[Inscrição Uspianos](https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2FPages%2FResponsePage.aspx%3Fid%3Dsj_y7GVqQEy79v76pMh72rKo94U3EYJLpTLYU5qiICBUOU9RWEJJQTlHMFc4ME1XNEVVSTNCMUNPOC4u&data=02%7C01%7C%7C58bca7e4014b4fa7711908d730aedf55%7Cecf23fb26a654c40bbf6fefaa4c87bda%7C0%7C0%7C637031399948673273&sdata=r185HOXGT6YegHgoMFfatKEAdNms00ItsYpqIXz%2F2Go%3D&reserved=0)
-
-[Inscrição Netshoenianos](https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2FPages%2FResponsePage.aspx%3Fid%3Dsj_y7GVqQEy79v76pMh72rKo94U3EYJLpTLYU5qiICBUQ1hNMkpFU0g5MVhPU0U3WkpWRUtZTFpPVy4u&data=02%7C01%7C%7C58bca7e4014b4fa7711908d730aedf55%7Cecf23fb26a654c40bbf6fefaa4c87bda%7C0%7C0%7C637031399948653281&sdata=V%2FdLbB0yeCNJxGVbgV1N1CkLfhQem0KkmTj5pywMRFE%3D&reserved=0)
-
-[Inscrição Magalu](https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2FPages%2FResponsePage.aspx%3Fid%3Dsj_y7GVqQEy79v76pMh72rKo94U3EYJLpTLYU5qiICBUQk1ZODhQM0JBNFFSVENWSkVUUTdIREZRSC4u&data=02%7C01%7C%7C58bca7e4014b4fa7711908d730aedf55%7Cecf23fb26a654c40bbf6fefaa4c87bda%7C0%7C0%7C637031399948663273&sdata=U6obm7i8wXfwF1VOF1GIgHy0R2w66%2FP127gT3JFGGPM%3D&reserved=0)
+# Primeiros passos
+1.	Conectar na Wifi do evento:
+  -	SSID: H4CK47H0N – Netshoes
+  -	Password: 4sfvG$%qH+
+2. Acessar [Google Cloud Console](https://console.cloud.google.com) com as credenciais do grupo.
+  - *NOTA:* As credenciais de acesso serão disponibilizados aos grupos no dia do evento.
+3. Selecionar o projeto ```hackathon-xx```, sendo ```xx``` o número do seu grupo.
+4. Na aba recursos, acessar o ```Big Query```.
+  - Aqui você encontrará as bases de dados necessárias para a realização dos desafios - ```dadosBrutos```. 
+  - Seu grupo terá permissão de escrita/leitura nesse dataset. **CUIDADO: havendo necessidade de escrita, recomendamos copiar a tabela e não alterar a original.**
