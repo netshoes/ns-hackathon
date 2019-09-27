@@ -83,5 +83,6 @@ Por qualidade de catálogo deve-se considerar os fatores abaixo:
   - *NOTA:* As credenciais de acesso serão disponibilizados aos grupos no dia do evento.
 3. Selecionar o projeto ```hackathon-xx```, sendo ```xx``` o número do seu grupo.
 4. Na aba recursos, acessar o ```Big Query```.
-  - Aqui você encontrará as bases de dados necessárias para a realização dos desafios - ```dadosBrutos```. 
+  ![recursos](image-01.png?raw=true “recursos”)
+  - Aqui você encontrará as bases de dados necessárias para a realização dos desafios - ```dadosBrutos```. ![dadosBrutos](image-02.png?raw=true “recursos”)
   - Seu grupo terá permissão de escrita/leitura nesse dataset. **CUIDADO: havendo necessidade de escrita, recomendamos copiar a tabela e não alterar a original.**
