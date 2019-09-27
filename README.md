@@ -86,3 +86,6 @@ Por qualidade de catálogo deve-se considerar os fatores abaixo:
   ![recursos](image-01.png?raw=true “recursos”)
   - Aqui você encontrará as bases de dados necessárias para a realização dos desafios - ```dadosBrutos```. ![dadosBrutos](image-02.png?raw=true “recursos”)
   - Seu grupo terá permissão de escrita/leitura nesse dataset. **CUIDADO: havendo necessidade de escrita, recomendamos copiar a tabela e não alterar a original.**
+
+
+![alt text](image-01.png)
