@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hermes - Fast Check Shoes and Clothes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link href="./stylesheets/toastr.min.css" rel="stylesheet" type="text/css" />
+    <script>
+        if (navigator.serviceWorker.controller) {
+            console.log('[PWA Builder] active service worker found, no need to register')
+        } else {
+            //Register the ServiceWorker
+            navigator.serviceWorker.register('./sw.js')
+                .then(function (reg) {
+                    console.log('Service worker has been registered for scope:' + reg.scope);
+                });
+        }
+    </script>
+</head>
+
+<body class="wrapper">
+    <div class="loader_wrapper">
+        <div id="loader"></div>
+    </div>
+    <div class="wrapper">
+        <header id="header">
+            <div class="col-md-12">
+                <div class="col-md-3 col-xs-6  col-sm-3 logo ">
+                    <!--<img alt="" height="40" src="images/logo.svg" style="margin-top: 15px;">-->
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 logo text-center title-wrapper">
+                    <h3 class="title"></h3>
+                </div>
+                <div class="col-md-3 col-xs-6 col-sm-3 logo">
+                    <img class="img-responsive" src="images/logo.png" style="height:80px;"/>
+                </div>
+            </div>
+        </header>
+        <div class="modal">
+            <div id="loader"></div>
+        </div>
+        <div class="container  conteudo">
+            <div class="row" style="margin-top : 10px">
+                <label for="cboCategoria">Escolha a Categoria</label>
+                <select id="cboCategoria" class="form-control">
+                    <option value="12569">Tênis</option>
+                    <option value="12699">Camiseta</option>
+                </select>
+                <label for="cboMarca">Escolha o Marca</label>
+                <select id="cboMarca" class="form-control">
+                    <option value="12564">Adidas</option>
+                    <option value="12622">New Balance</option>
+                    <option value="11991">Olympikus</option>
+                </select>
+                <label for="cboCor">Escolha o Cor</label>
+                <select id="cboCor" class="form-control">
+                    <option value="12567">Preto</option>
+                    <option value="12633">Branco</option>
+                    <option value="11912">Cinza</option>
+                </select>
+            </div>
+            <div class="row" style="margin-top : 50px">
+                <div class="col-md-12 col-xs-12">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div id="demo"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div id="imgs"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="imgsCompareWrapper">
+                                        <div class="col-md-3 imgsCompare" data-index="0">
+                                        </div>
+                                        <div class="col-md-3 imgsCompare" data-index="1">
+                                        </div>
+                                        <div class="col-md-3 imgsCompare" data-index="2">
+                                        </div>
+                                        <div class="col-md-3 imgsCompare" data-index="3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <button type="button" id="sendImages" class="btn btn-lg btn-primary" style="width:100%">
+                                        <strong> Enviar </strong> <span class="glyphicon glyphicon-upload"></span> 
+                                </button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" id="reset" class="btn btn-lg btn-default" style="width:100%">
+                                        <strong>Limpar Consulta</strong> <span class="glyphicon glyphicon-remove"></span> 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="warning-message" class="alert alert-warning"></div>
+            </div>
+
+            <div class="row" style="margin-top:20px;overflow-y:auto">
+                <div class="table-responsive">
+                    <table id="tbCfgCategoria" class="table table-bordered table-striped table-hover" style="background-color:white;">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Sinistro</th>
+                                <th class="text-center">Descrição Impacto</th>
+                                <th class="text-center">Num. Orçamento Único</th>
+                                <th class="text-center">Perc. de Assertividade
+                                    <span data-toggle="tooltip" title="Perc. de Assertividade" class="glyphicon glyphicon-question-sign"></span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="body_sinistros">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="cmpImages" role="dialog">
+                <div class="modal-dialog" style="width: 70%;">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h3 class="modal-title text-center">Análise de Imagens</h3>
+                    </div>
+                    <div class="modal-body" style="display: inline-block;">
+                            <div class="col-md-6">
+                                <div id="img-left">
+                                </div>
+                            </div>	
+                            <div class="col-md-6">
+                                <div id="img-right">
+                                </div>
+                            </div>		
+                    </div>
+                  </div>
+                  
+                </div>
+          </div>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="javascripts/spartan-multi-image-picker.js"></script>
+    <script src="javascripts/toastr.min.js"></script>
+    <script src="javascripts/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            var images_count = 0;
+            $("#reset").click(() => resetView(true));
+            $('[data-toggle="tooltip"]').tooltip();
+            $("#demo").spartanMultiImagePicker({
+                fieldName: 'fileUpload[]',
+                maxCount: 4,
+                rowHeight: '200px',
+                placeholderImage: {
+                    image: "images/image_add.png",
+                    width: '64px'
+                },
+                groupClassName: 'col-md-3 col-sm-3 col-xs-6',
+                allowedExt: 'png|jpg|jpeg',
+                onRenderedPreview: function () {
+                    $('.resultSpan').remove();
+                    images_count++;
+                },
+                onRemoveRow: function (index) {
+                    images_count--;
+                    if(images_count < 0)
+                        images_count = 0;
+                    if (images_count == 0) {
+                        $(".imgsCompare").empty();
+                    }
+                }
+            });
+
+            $("#sendImages").click(function () {
+                if (images_count == 0) {
+                    toastr.warning('<span style="color:black"><b>Selecione as Imagens para análise</b><span>');
+                    return false;
+                }
+                var arrImages = [];
+                var images = $(".img_");
+                indexImages(images);
+                for (var i = 0; i < images.length; i++) {
+                    try {
+                        var ms = new Date().getTime();
+                        var id = Math.floor((ms * Math.random()) + 1);
+                        var e = document.getElementById("cboCategoria");
+                        var categoria = e.options[e.selectedIndex].text;
+
+                        var e = document.getElementById("cboMarca");
+                        var marca = e.options[e.selectedIndex].text;
+
+                        var e = document.getElementById("cboCor");
+                        var cor = e.options[e.selectedIndex].text;
+
+                        $(images[i]).attr("id", id);
+                        var srcData = images[i].src;
+                        if (srcData == "") continue;
+                        arrImages.push({ "name": id, "cor":cor, "marca":marca, "categoria":categoria, "image": images[i].src.replace(/^data:image\/(png|jpg|jpeg);base64,/, "") });
+                    } catch (e) {
+                        console.log("errr");
+                    }
+                    //console.log(arrImages);
+                }
+                analiseImages(arrImages);
+            });
+
+            function analiseImages(images) {
+                var model = $("#cboModelo").val();
+                var data = JSON.stringify(images);
+                resetView();
+                showloader();
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:5001/predict",
+                    dataType: "json",
+                    crossDomain: true,
+                    ContentType: "application/json; charset=utf-8",
+                    data: data,
+                    success: function (xhr) {
+                        try {
+                            if (xhr.status) {
+                                if (xhr.status == "warning") {
+                                    $("#warning-message")
+                                        .empty()
+                                        .html(" <span class=\"glyphicon glyphicon-warning-sign\"></span> <strong>" + xhr.message + "</strong>")
+                                        .fadeIn(1000);
+                                }
+                            }
+                            var results = xhr.results;
+
+                            console.log(results)
+
+                            $('.resultSpan').remove();
+                            if (arrPosicoes.length > 0) arrPosicoes = [];
+                            if (dictImagePosicao.length > 0) dictImagePosicao = [];
+                            for (let i = 0; i < results.length; i++) {
+                                for (var prop in results[i]) {
+                                    var categoria = 'Errada'
+                                    if (results[i][prop].categoria) categoria = 'Correta'
+                                    var marca = results[i][prop].marca
+                                    if (categoria == "Errada") {
+                                        marca = "Categoria Incorreta"
+                                    }
+                                    $("#" + prop)
+                                    .parent()
+                                    .append("<span class='resultSpan'>Categoria : " + categoria + "<br> Marca : " + marca + "<br> Cor Predominante : " + results[i][prop].cor+ "</span>");
+                                    
+                                    //setPosicoes(results[i][prop].posicao, $("#" + prop));
+                                }
+                            }
+                        } catch (err) {
+                            console.log("Erro : " + err.message);
+                            toastr.error('Erro ao Analisar as fotos.', 'Erro');
+                        }
+                        hideloader();
+                        console.log(xhr);
+                    }
+                }).fail(() => {
+                    hideloader();
+                    toastr.error('<span style="color:black"><b>Erro ao Analisar as Imagens</b><span>');
+                    return false;
+                });
+            }
+        })
+    </script>
+    </div>
+</body>
+
+</html>
