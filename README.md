@@ -122,8 +122,8 @@ Configure a subscription correspondente ao grupo:
 `hackathon07`
 `hackathon08`
 `hackathon09`
-`hackathon010`
-`hackathon011`
+`hackathon10`
+`hackathon11`
 
 
 
