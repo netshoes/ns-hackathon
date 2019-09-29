@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="src/js/jquery-3.4.1.min.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastrar pedido</title>
+</head>
+
+<link rel="stylesheet" href="src/css/main.css">
+<body>
+	<div class="header">
+		<div class="logo">
+			<div class="logo-img">
+				<img src="//static.netshoes.com.br/0.0.387.11/netshoesbr/images/logo.png">
+			</span>
+		</div>		
+	</div>
+	<div class="main">
+		<div class="title">
+			<span class="title-content">Cadastre um novo SKU</span>
+		</div>
+		<div id="cadastroSku">
+			<div class="field flex flex-col inputText">
+				<label for="txtNome">Nome: </label>
+				<input type="text" id="txtNome">
+				<div class="resposta" id="respostaNome"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtCategoria">Categoria: </label>
+				<input type="text" id="txtCategoria">
+				<div class="resposta" id="respostaCategoria"></div>
+			</div>
+			<div class="flex flex-row">
+				<div class="field flex flex-col inputText">
+					<label for="txtCor">Cor: </label>
+					<input type="text" id="txtCor">
+					<div class="resposta" id="respostaCor"></div>
+				</div>
+				<div class="field flex flex-col inputText">
+					<label for="txtSabor">Sabor: </label>
+					<input type="text" id="txtSabor">
+					<div class="resposta" id="respostaSabor"></div>
+				</div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtEanLsbn">Ean LSBN: </label>
+				<input type="text" id="txtEanLsbn">
+				<div class="resposta" id="respostaEanLsbn"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtDepartamento">Departamento: </label>
+				<input type="text" id="txtDepartamento">
+				<div class="resposta" id="respostaDepartamento"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtTipoProduto">Tipo Produto: </label>
+				<input type="text" id="txtTipoProduto">
+				<div class="resposta" id="respostaTipoProduto"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtNome">Tamanho: </label>
+				<input type="text" id="txtTamanho">
+				<div class="resposta" id="respostaTamanho"></div>
+			</div>
+			<div class="flex flex-row">
+				<div class="field flex flex-col inputText">
+					<label for="txtPrecoDe">Preço de: </label>
+					<input type="text" id="txtPrecoDe">
+					<div class="resposta" id="respostaPrecoDe"></div>
+				</div>
+				<div class="field flex flex-col inputText">
+					<label for="txtPrecoPor">Preço por: </label>
+					<input type="text" id="txtPrecoPor">
+					<div class="resposta" id="respostaPrecoPor"></div>
+				</div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtPeso">Peso: </label>
+				<input type="text" id="txtpeso">
+				<div class="resposta" id="respostaPeso"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtMarca">Marca: </label>
+				<input type="text" id="txtMarca">
+				<div class="resposta" id="respostaMarca"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtAltura">Altura: </label>
+				<input type="text" id="txtAltura">
+				<div class="resposta" id="respostaAltura"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtLargura">Largura: </label>
+				<input type="text" id="txtLargura">
+				<div class="resposta" id="respostaLargura"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtProfundidade">Profundiadade: </label>
+				<input type="text" id="txtProfundidade">
+				<div class="resposta" id="respostaProfundidade"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtValorGenero">Valor Genero: </label>
+				<input type="text" id="txtValorGenero">
+				<div class="resposta" id="respostaValorGenero"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtNomeGenero">Nome Gênero: </label>
+				<input type="text" id="txtNomeGenero">
+				<div class="resposta" id="respostaNomeGenero"></div>
+			</div>
+			<div class="field flex flex-col inputText">
+				<label for="txtSubCatN4">Categoria N4: </label>
+				<input type="text" id="txtSubCatN4">
+				<div class="resposta" id="respostaSubCatN4"></div>
+			</div>
+			<div class="field flex flex-col inputTextArea">
+				<label for="txtDescricao">Descrição: </label>
+				<textarea id="txtDescricao"></textarea>
+				<div class="resposta" id="respostaDescricao"></div>
+			</div>
+			<div class="field flex flex-col button">
+				<button id="btnCadastrar">Cadastrar</button>
+			</div>
+		</div>
+		<div id="responseError"></div>
+	</div>
+</body>
+</html>
+
+<!-- Scripts -->
+<script src="src/js/main.js"></script>

@@ -1,0 +1,111 @@
+main, body{
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS",Arial,sans-serif;
+}
+.flex{
+	display: flex;
+}
+.flex-col{
+	flex-direction: column;
+}
+.main{
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.field{
+	width: 100%;
+	padding-top: 0.9rem;
+	padding-bottom: 0.9rem;
+}
+.flex-row{
+	flex-direction: column;
+}
+
+.field input{
+	font-size: 1rem;
+	height: 1rem;
+	padding: 0.7rem;
+}
+
+.inputTextArea textarea{
+	height: 8rem;
+	font-size: 1rem;
+	padding: 0.7rem;
+}
+
+.header{
+	height: 76px;
+	background-color: #5a2d82;
+}
+.logo{
+	width: 80%;
+	margin: auto;
+}
+.logo-img{
+	display: flex;
+	align-items: center;
+	width: 160px;
+	height: 76px;
+}
+
+.title-content{
+	font-size: 1.5rem;
+}
+
+.title{
+	padding: 0.8rem 0;
+}
+.button button{
+	background-color: #ff691e;
+	border-radius: 1px;
+	height: 3.5rem;
+	border: none;
+	font-family: "Trebuchet MS",Arial,sans-serif;
+	color: white;
+	font-weight: 600;
+	font-size: 1.3rem;
+	font-family: "Trebuchet MS",Arial,sans-serif;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1.3em;
+}
+
+.resposta{
+	color: #383838;
+	font-weight: bold;
+}
+
+@media only screen and (min-width: 780px) {
+	html{
+		font-size: 20px;
+	}
+	.flex-row{
+		flex-direction: row;
+	}
+	.flex-row .field{
+		width: calc(50% - 10px);
+	}
+	.flex-row .field:first-child{
+		padding-right: 10px;
+	}
+	.flex-row .field:last-child{
+		padding-left: 10px;
+	}
+	.field input{
+		font-size: 0.875rem;
+		height: 0.875rem;
+		padding: 0.7rem;
+	}
+
+	.button{
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.button button{
+		width: 23%;
+	}
+}
