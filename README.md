@@ -99,3 +99,31 @@ Status do pedido: https://us-central1-hackathon-2019-254113.cloudfunctions.net/p
 Status da troca: https://us-central1-hackathon-2019-254113.cloudfunctions.net/exchange_status
 
 Saldo do voucher: https://us-central1-hackathon-2019-254113.cloudfunctions.net/voucher_balance
+
+#### Para publicar suas mensagens para o whats netshoes:
+Chamda Post para: https://us-central1-hackathon-2019-254113.cloudfunctions.net/message 
+
+```
+{
+  "message": "str",
+  "phone": "11999999999"
+}
+```
+
+#### Para consumir as mensagens que vem do whats netshoes:
+Configure a subscription correspondente ao grupo:
+
+`hackathon01`
+`hackathon02`
+`hackathon03`
+`hackathon04`
+`hackathon05`
+`hackathon06`
+`hackathon07`
+`hackathon08`
+`hackathon09`
+`hackathon010`
+`hackathon011`
+
+
+
