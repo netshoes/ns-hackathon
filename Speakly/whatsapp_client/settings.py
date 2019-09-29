@@ -1,0 +1,6 @@
+WAPP_SEND_URL = ''
+PROJECT_ID = ''
+TOPIC_NAME = ''
+SUB_NAME = ''
+
+
