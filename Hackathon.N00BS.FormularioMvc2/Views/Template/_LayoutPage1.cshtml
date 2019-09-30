@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Estilo/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Estilo/jquery-3.4.1.min.js"></script>
+    <script src="~/Estilo/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="menu" style="background-color:darkslateblue">
+            <ul class="nav">
+                <li class="nav-item">
+                    @Html.ActionLink("Inserir Produto", "Inserir", "Produto", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Listar Produto Bons", "Index", "Produto", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Listar Produto Ruins", "Index", "Produto", null, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Cores", "Index", "Cor", null, new { @class = "nav-link" })
+                </li>
+            </ul>
+        </div>
+        @RenderBody()
+    </div>
+</body>
+</html>

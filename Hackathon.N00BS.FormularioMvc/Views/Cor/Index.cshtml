@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Template/_MeuLayout.cshtml";
+}
+
+<h2>Cores já cadastradas na Netshoes (dados reais)</h2>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Cor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cor in ViewBag.Cores)
+        {
+            <tr>
+                <td>@cor</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
