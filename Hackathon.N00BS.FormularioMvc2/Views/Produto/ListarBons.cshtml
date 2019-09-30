@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "ListarBons";
+    Layout = "~/Views/Template/_LayoutPage1.cshtml";
+}
+
+<h2>Dados bons</h2>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Codigo de Barras</th><th>Cor</th><th>Data Cadastro</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (string produto in ViewBag.Bons)
+        {
+        <tr>
+            <td>@produto.CodigoBarras</td>
+            <td>@produto.Cor</td>
+            <td>@produto.Data</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
