@@ -1,0 +1,3 @@
+dialogflow
+google-cloud-pubsub
+requests
