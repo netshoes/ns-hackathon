@@ -1,0 +1,17 @@
+server:
+  port: 9401
+  session:
+    timeout: 600s
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
+spring:
+  data:
+    mongodb:
+      uri: mongodb://owner:${spring.data.mongodb.password}@ownproject-shard-00-00-jbsf3.mongodb.net:27017,ownproject-shard-00-01-jbsf3.mongodb.net:27017,ownproject-shard-00-02-jbsf3.mongodb.net:27017/${spring.data.mongodb.database}?ssl=true&replicaSet=OwnProject-shard-0&authSource=admin&retryWrites=true&w=majority
+      database: 'OwnProject'
+      password: 's26pIjAwru'
