@@ -1,0 +1,21 @@
+{
+	"nome": "nome",
+	"categoria": "categoria",
+	"cor": "cor",
+	"sabor": "sabor",
+	"eanLSBN": "eanLSBN",
+	"departamento": "departamento",
+	"tipoProduto": "tipoProduto",
+	"tamanho": "tamanho",
+	"precoDe": "precoDe",
+	"precoPor": "precoPor",
+	"subCatN4": "subCatN4",
+	"descricao": "descricao",
+	"valorGenero":"valorGenero",
+	"peso":"peso",
+	"marca":"marca",
+	"altura":"altura",
+	"largura":"largura",
+	"profundidade":"profundidade",
+	"nomeGenero":"nomeGenero"
+}
